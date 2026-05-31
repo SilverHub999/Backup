@@ -1552,7 +1552,7 @@ local ClosureBindings = {
 					Size = UDim2.new(1, -16, 0, 18),
 					Position = UDim2.fromOffset(0, 2),
 					ThemeTag = {
-						TextColor3 = "Text",
+						TextColor3 = "MainText",
 					},
 				}),
 				Section.Container,
