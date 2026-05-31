@@ -1547,7 +1547,6 @@ local ClosureBindings = {
 					TextTransparency = 0,
 					FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal),
 					TextSize = 20,
-					TextColor3 = Color3.fromRGB(213, 55, 102),
 					TextXAlignment = "Left",
 					TextYAlignment = "Center",
 					Size = UDim2.new(1, -16, 0, 18),
