@@ -5964,7 +5964,8 @@ local ClosureBindings = {
 			DialogInput = Color3.fromRGB(30, 30, 30),
 			DialogInputLine = Color3.fromRGB(213, 55, 102),
 
-			Text = Color3.fromRGB(213, 55, 102),
+			MainText = Color3.fromRGB(213, 55, 102),
+			Text = Color3.fromRGB(255, 255, 255),
 			SubText = Color3.fromRGB(180, 180, 180),
 
 			Hover = Color3.fromRGB(230, 80, 130), -- สี Hover สดกว่า accent เล็กน้อย
