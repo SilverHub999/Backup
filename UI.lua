@@ -1,4 +1,4 @@
-print("UI START 1")
+print("UI START")
 
 -- Will be used later for getting flattened globals
 local ImportGlobals
@@ -1547,8 +1547,8 @@ local ClosureBindings = {
 					RichText = true,
 					Text = string.format(
 						'<font color="#FFFFFF">[%s] - </font><font color="#D53766">%s</font>',
-						Icon,
-						Title
+						tostring(Icon or ""),
+						tostring(Title or "")
 					),
 					TextTransparency = 0,
 					FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal),
