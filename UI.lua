@@ -1545,7 +1545,6 @@ local ClosureBindings = {
 					RichText = true,
 					Text = Title,
 					TextTransparency = 0,
-					TextColor3 = Color3.fromRGB(213, 55, 102),
 					FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal),
 					TextSize = 20,
 					TextXAlignment = "Left",
@@ -5965,7 +5964,7 @@ local ClosureBindings = {
 			DialogInput = Color3.fromRGB(30, 30, 30),
 			DialogInputLine = Color3.fromRGB(213, 55, 102),
 
-			Text = Color3.fromRGB(255, 255, 255),
+			Text = Color3.fromRGB(213, 55, 102),
 			SubText = Color3.fromRGB(180, 180, 180),
 
 			Hover = Color3.fromRGB(230, 80, 130), -- สี Hover สดกว่า accent เล็กน้อย
