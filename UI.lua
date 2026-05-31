@@ -1545,13 +1545,16 @@ local ClosureBindings = {
 					RichText = true,
 					Text = Title,
 					TextTransparency = 0,
+					TextColor3 = Color3.fromRGB(213, 55, 102),
 					FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal),
 					TextSize = 20,
-					TextColor3 = Color3.fromRGB(213, 55, 102),
 					TextXAlignment = "Left",
 					TextYAlignment = "Center",
 					Size = UDim2.new(1, -16, 0, 18),
 					Position = UDim2.fromOffset(0, 2),
+					ThemeTag = {
+						TextColor3 = "Text",
+					},
 				}),
 				Section.Container,
 			})
