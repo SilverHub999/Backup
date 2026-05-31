@@ -1520,7 +1520,7 @@ local ClosureBindings = {
 
 		local New = Creator.New
 
-		return function(Title, Parent)
+		return function(Icon, Title, Parent)
 			local Section = {}
 
 			Section.Layout = New("UIListLayout", {
@@ -1543,7 +1543,11 @@ local ClosureBindings = {
 			}, {
 				New("TextLabel", {
 					RichText = true,
-					Text = Title,
+					Text = string.format(
+						'<font color="#FFFFFF">[%s] - </font><font color="#D53766">%s</font>',
+						Icon,
+						Title
+					),
 					TextTransparency = 0,
 					FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal),
 					TextSize = 20,
@@ -1717,10 +1721,15 @@ local ClosureBindings = {
 			Tab.Container = Tab.ContainerFrame
 			Tab.ScrollFrame = Tab.Container
 
-			function Tab:AddSection(SectionTitle)
+			function Tab:AddSection(Icon, SectionTitle)
 				local Section = { Type = "Section" }
 
-				local SectionFrame = require(Components.Section)(SectionTitle, Tab.Container)
+				local SectionFrame = require(Components.Section)(
+					Icon,
+					SectionTitle,
+					Tab.Container
+				)
+
 				Section.Container = SectionFrame.Container
 				Section.ScrollFrame = Tab.Container
 
