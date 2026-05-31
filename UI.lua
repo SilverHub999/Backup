@@ -1,3 +1,5 @@
+print("UI START")
+
 -- Will be used later for getting flattened globals
 local ImportGlobals
 
@@ -1549,7 +1551,7 @@ local ClosureBindings = {
 						Title
 					),
 					TextTransparency = 0,
-					FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal),
+					FontFace = Font.new("rbxasset://fonts/families/Bangers.json", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal),
 					TextSize = 20,
 					TextXAlignment = "Left",
 					TextYAlignment = "Center",
