@@ -1,4 +1,4 @@
-print("UI START")
+print("UI STARTER")
 
 -- Will be used later for getting flattened globals
 local ImportGlobals
@@ -1558,7 +1558,7 @@ local ClosureBindings = {
 					Size = UDim2.new(1, -16, 0, 18),
 					Position = UDim2.fromOffset(0, 2),
 					ThemeTag = {
-						TextColor3 = "MainText",
+						TextColor3 = "Text",
 					},
 				}),
 				Section.Container,
@@ -6653,4 +6653,3 @@ do
 	-- If any scripts are currently running now from task scheduler, the scope won't close until all running threads are closed
 	-- (thanks for coming to my ted talk)
 end
-
