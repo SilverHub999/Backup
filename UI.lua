@@ -5972,19 +5972,19 @@ local ClosureBindings = {
 			Accent = Color3.fromRGB(139, 92, 246), -- ม่วง #8B5CF6 หลัก
 
 			AcrylicMain = Color3.fromRGB(10, 10, 10),         -- ดำสนิท
-			AcrylicBorder = Color3.fromRGB(35, 35, 35),       -- ขอบเทาเข้ม
+			AcrylicBorder = Color3.fromRGB(120, 80, 180),     -- กรอบม่วง
 			AcrylicGradient = ColorSequence.new(
 				Color3.fromRGB(20, 20, 20),
 				Color3.fromRGB(10, 10, 10)
 			),
 			AcrylicNoise = 0.9,
 
-			TitleBarLine = Color3.fromRGB(45, 45, 45),
+			TitleBarLine = Color3.fromRGB(120, 80, 180),
 
 			Tab = Color3.fromRGB(139, 92, 246),               -- สีแท็บที่เลือก
 			Element = Color3.fromRGB(18, 18, 18),
-			ElementBorder = Color3.fromRGB(35, 35, 35),
-			InElementBorder = Color3.fromRGB(30, 30, 30),
+			ElementBorder = Color3.fromRGB(120, 80, 180),
+			InElementBorder = Color3.fromRGB(120, 80, 180),
 			ElementTransparency = 0.85,
 
 			ToggleSlider = Color3.fromRGB(139, 92, 246),
@@ -6006,7 +6006,7 @@ local ClosureBindings = {
 			DialogHolderLine = Color3.fromRGB(25, 20, 25),
 			DialogButton = Color3.fromRGB(139, 92, 246),
 			DialogButtonBorder = Color3.fromRGB(139, 92, 246),
-			DialogBorder = Color3.fromRGB(40, 40, 40),
+			DialogBorder = Color3.fromRGB(120, 80, 180),
 			DialogInput = Color3.fromRGB(30, 30, 30),
 			DialogInputLine = Color3.fromRGB(139, 92, 246),
 
