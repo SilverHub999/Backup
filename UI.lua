@@ -974,7 +974,7 @@ local ClosureBindings = {
 			local Button = {}
 
 			Button.Title = New("TextLabel", {
-				FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json"),
+				FontFace = Font.new("rbxasset://fonts/families/PressStart2P.json"),
 				TextColor3 = Color3.fromRGB(200, 200, 200),
 				TextSize = 14,
 				TextWrapped = true,
@@ -1111,7 +1111,7 @@ local ClosureBindings = {
 
 			NewDialog.Title = New("TextLabel", {
 				FontFace = Font.new(
-					"rbxasset://fonts/families/GothamSSm.json",
+					"rbxasset://fonts/families/PressStart2P.json",
 					Enum.FontWeight.SemiBold,
 					Enum.FontStyle.Normal
 				),
@@ -1219,7 +1219,7 @@ local ClosureBindings = {
 			local Element = {}
 
 			Element.TitleLabel = New("TextLabel", {
-				FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal),
+				FontFace = Font.new("rbxasset://fonts/families/PressStart2P.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal),
 				Text = Title,
 				TextColor3 = Color3.fromRGB(240, 240, 240),
 				TextSize = 13,
@@ -1233,7 +1233,7 @@ local ClosureBindings = {
 			})
 
 			Element.DescLabel = New("TextLabel", {
-				FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json"),
+				FontFace = Font.new("rbxasset://fonts/families/PressStart2P.json"),
 				Text = Desc,
 				TextColor3 = Color3.fromRGB(200, 200, 200),
 				TextSize = 12,
@@ -1392,7 +1392,7 @@ local ClosureBindings = {
 				RichText = true,
 				TextColor3 = Color3.fromRGB(255, 255, 255),
 				TextTransparency = 0,
-				FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json"),
+				FontFace = Font.new("rbxasset://fonts/families/PressStart2P.json"),
 				TextSize = 13,
 				TextXAlignment = "Left",
 				TextYAlignment = "Center",
@@ -1405,7 +1405,7 @@ local ClosureBindings = {
 			})
 
 			NewNotification.ContentLabel = New("TextLabel", {
-				FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json"),
+				FontFace = Font.new("rbxasset://fonts/families/PressStart2P.json"),
 				Text = Config.Content,
 				TextColor3 = Color3.fromRGB(240, 240, 240),
 				TextSize = 14,
@@ -1421,7 +1421,7 @@ local ClosureBindings = {
 			})
 
 			NewNotification.SubContentLabel = New("TextLabel", {
-				FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json"),
+				FontFace = Font.new("rbxasset://fonts/families/PressStart2P.json"),
 				Text = Config.SubContent,
 				TextColor3 = Color3.fromRGB(240, 240, 240),
 				TextSize = 14,
@@ -1673,7 +1673,7 @@ local ClosureBindings = {
 					TextColor3 = Color3.fromRGB(255, 255, 255),
 					TextTransparency = 0,
 					FontFace = Font.new(
-						"rbxasset://fonts/families/GothamSSm.json",
+						"rbxasset://fonts/families/PressStart2P.json",
 						Enum.FontWeight.Regular,
 						Enum.FontStyle.Normal
 					),
@@ -1816,7 +1816,7 @@ local ClosureBindings = {
 			local Textbox = {}
 
 			Textbox.Input = New("TextBox", {
-				FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json"),
+				FontFace = Font.new("rbxasset://fonts/families/PressStart2P.json"),
 				TextColor3 = Color3.fromRGB(200, 200, 200),
 				TextSize = 14,
 				TextXAlignment = Enum.TextXAlignment.Left,
@@ -2013,7 +2013,7 @@ local ClosureBindings = {
 						RichText = true,
 						Text = Config.Title,
 						FontFace = Font.new(
-							"rbxasset://fonts/families/GothamSSm.json",
+							"rbxasset://fonts/families/PressStart2P.json",
 							Enum.FontWeight.Regular,
 							Enum.FontStyle.Normal
 						),
@@ -2032,7 +2032,7 @@ local ClosureBindings = {
 						Text = Config.SubTitle,
 						TextTransparency = 0.4,
 						FontFace = Font.new(
-							"rbxasset://fonts/families/GothamSSm.json",
+							"rbxasset://fonts/families/PressStart2P.json",
 							Enum.FontWeight.Regular,
 							Enum.FontStyle.Normal
 						),
@@ -2416,7 +2416,7 @@ local ClosureBindings = {
 				Dialog.Title.Text = Config.Title
 
 				local Content = New("TextLabel", {
-					FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json"),
+					FontFace = Font.new("rbxasset://fonts/families/PressStart2P.json"),
 					Text = Config.Content,
 					TextColor3 = Color3.fromRGB(240, 240, 240),
 					TextSize = 14,
@@ -2782,7 +2782,7 @@ local ClosureBindings = {
 				local function CreateInputLabel(Text, Pos)
 					return New("TextLabel", {
 						FontFace = Font.new(
-							"rbxasset://fonts/families/GothamSSm.json",
+							"rbxasset://fonts/families/PressStart2P.json",
 							Enum.FontWeight.Medium,
 							Enum.FontStyle.Normal
 						),
@@ -3240,7 +3240,7 @@ local ClosureBindings = {
 			Dropdown.SetDesc = DropdownFrame.SetDesc
 
 			local DropdownDisplay = New("TextLabel", {
-				FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+				FontFace = Font.new("rbxasset://fonts/families/PressStart2P.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
 				Text = "Value",
 				TextColor3 = Color3.fromRGB(240, 240, 240),
 				TextSize = 13,
@@ -3486,7 +3486,7 @@ local ClosureBindings = {
 					})
 
 					local ButtonLabel = New("TextLabel", {
-						FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json"),
+						FontFace = Font.new("rbxasset://fonts/families/PressStart2P.json"),
 						Text = Value,
 						TextColor3 = Color3.fromRGB(200, 200, 200),
 						TextSize = 13,
@@ -3820,7 +3820,7 @@ local ClosureBindings = {
 			Keybind.SetDesc = KeybindFrame.SetDesc
 
 			local KeybindDisplayLabel = New("TextLabel", {
-				FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+				FontFace = Font.new("rbxasset://fonts/families/PressStart2P.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
 				Text = Config.Default,
 				TextColor3 = Color3.fromRGB(240, 240, 240),
 				TextSize = 13,
@@ -4080,7 +4080,7 @@ local ClosureBindings = {
 			})
 
 			local SliderDisplay:TextBox = New("TextBox", {
-				FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json"),
+				FontFace = Font.new("rbxasset://fonts/families/PressStart2P.json"),
 				Text = "Value",
 				TextSize = 12,
 				TextWrapped = true,
@@ -5969,52 +5969,52 @@ local ClosureBindings = {
 		local maui, script, require, getfenv, setfenv = ImportGlobals(48)
 		return {
 			Name = "Normal Hub",
-			Accent = Color3.fromRGB(139, 92, 246), -- ม่วง #8B5CF6 หลัก
+			Accent = Color3.fromRGB(213, 55, 102), -- สีแดงอมชมพูหลัก
 
 			AcrylicMain = Color3.fromRGB(10, 10, 10),         -- ดำสนิท
-			AcrylicBorder = Color3.fromRGB(120, 80, 180),     -- กรอบม่วง
+			AcrylicBorder = Color3.fromRGB(35, 35, 35),       -- ขอบเทาเข้ม
 			AcrylicGradient = ColorSequence.new(
 				Color3.fromRGB(20, 20, 20),
 				Color3.fromRGB(10, 10, 10)
 			),
 			AcrylicNoise = 0.9,
 
-			TitleBarLine = Color3.fromRGB(120, 80, 180),
+			TitleBarLine = Color3.fromRGB(45, 45, 45),
 
-			Tab = Color3.fromRGB(139, 92, 246),               -- สีแท็บที่เลือก
+			Tab = Color3.fromRGB(213, 55, 102),               -- สีแท็บที่เลือก
 			Element = Color3.fromRGB(18, 18, 18),
-			ElementBorder = Color3.fromRGB(120, 80, 180),
-			InElementBorder = Color3.fromRGB(120, 80, 180),
+			ElementBorder = Color3.fromRGB(35, 35, 35),
+			InElementBorder = Color3.fromRGB(30, 30, 30),
 			ElementTransparency = 0.85,
 
-			ToggleSlider = Color3.fromRGB(139, 92, 246),
-			ToggleToggled = Color3.fromRGB(45, 30, 80),
-			SliderRail = Color3.fromRGB(70, 50, 110),
+			ToggleSlider = Color3.fromRGB(213, 55, 102),
+			ToggleToggled = Color3.fromRGB(70, 20, 40),
+			SliderRail = Color3.fromRGB(80, 40, 60),
 
 			DropdownFrame = Color3.fromRGB(25, 25, 25),
 			DropdownHolder = Color3.fromRGB(20, 20, 20),
-			DropdownBorder = Color3.fromRGB(139, 92, 246),
+			DropdownBorder = Color3.fromRGB(213, 55, 102),
 			DropdownOption = Color3.fromRGB(30, 30, 30),
 
-			Keybind = Color3.fromRGB(139, 92, 246),
+			Keybind = Color3.fromRGB(213, 55, 102),
 			Input = Color3.fromRGB(25, 25, 25),
-			InputFocused = Color3.fromRGB(40, 28, 70),
-			InputIndicator = Color3.fromRGB(139, 92, 246),
+			InputFocused = Color3.fromRGB(45, 25, 40),
+			InputIndicator = Color3.fromRGB(213, 55, 102),
 
 			Dialog = Color3.fromRGB(15, 15, 15),
 			DialogHolder = Color3.fromRGB(25, 20, 25),
 			DialogHolderLine = Color3.fromRGB(25, 20, 25),
-			DialogButton = Color3.fromRGB(139, 92, 246),
-			DialogButtonBorder = Color3.fromRGB(139, 92, 246),
-			DialogBorder = Color3.fromRGB(120, 80, 180),
+			DialogButton = Color3.fromRGB(213, 55, 102),
+			DialogButtonBorder = Color3.fromRGB(213, 55, 102),
+			DialogBorder = Color3.fromRGB(40, 40, 40),
 			DialogInput = Color3.fromRGB(30, 30, 30),
-			DialogInputLine = Color3.fromRGB(139, 92, 246),
+			DialogInputLine = Color3.fromRGB(213, 55, 102),
 
-			MainText = Color3.fromRGB(139, 92, 246),
+			MainText = Color3.fromRGB(213, 55, 102),
 			Text = Color3.fromRGB(255, 255, 255),
 			SubText = Color3.fromRGB(180, 180, 180),
 
-			Hover = Color3.fromRGB(165, 125, 250), -- สี Hover สดกว่า accent เล็กน้อย
+			Hover = Color3.fromRGB(230, 80, 130), -- สี Hover สดกว่า accent เล็กน้อย
 			HoverChange = 0.07
 		}
 	end,
