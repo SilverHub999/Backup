@@ -1,4 +1,4 @@
-print("UI STARTer")
+print("UI START")
 
 -- Will be used later for getting flattened globals
 local ImportGlobals
@@ -5969,7 +5969,7 @@ local ClosureBindings = {
 		local maui, script, require, getfenv, setfenv = ImportGlobals(48)
 		return {
 			Name = "Normal Hub",
-			Accent = Color3.fromRGB(213, 55, 102), -- สีแดงอมชมพูหลัก
+			Accent = Color3.fromRGB(139, 92, 246), -- ม่วง #8B5CF6 หลัก
 
 			AcrylicMain = Color3.fromRGB(10, 10, 10),         -- ดำสนิท
 			AcrylicBorder = Color3.fromRGB(35, 35, 35),       -- ขอบเทาเข้ม
@@ -5981,40 +5981,40 @@ local ClosureBindings = {
 
 			TitleBarLine = Color3.fromRGB(45, 45, 45),
 
-			Tab = Color3.fromRGB(213, 55, 102),               -- สีแท็บที่เลือก
+			Tab = Color3.fromRGB(139, 92, 246),               -- สีแท็บที่เลือก
 			Element = Color3.fromRGB(18, 18, 18),
 			ElementBorder = Color3.fromRGB(35, 35, 35),
 			InElementBorder = Color3.fromRGB(30, 30, 30),
 			ElementTransparency = 0.85,
 
-			ToggleSlider = Color3.fromRGB(213, 55, 102),
-			ToggleToggled = Color3.fromRGB(70, 20, 40),
-			SliderRail = Color3.fromRGB(80, 40, 60),
+			ToggleSlider = Color3.fromRGB(139, 92, 246),
+			ToggleToggled = Color3.fromRGB(45, 30, 80),
+			SliderRail = Color3.fromRGB(70, 50, 110),
 
 			DropdownFrame = Color3.fromRGB(25, 25, 25),
 			DropdownHolder = Color3.fromRGB(20, 20, 20),
-			DropdownBorder = Color3.fromRGB(213, 55, 102),
+			DropdownBorder = Color3.fromRGB(139, 92, 246),
 			DropdownOption = Color3.fromRGB(30, 30, 30),
 
-			Keybind = Color3.fromRGB(213, 55, 102),
+			Keybind = Color3.fromRGB(139, 92, 246),
 			Input = Color3.fromRGB(25, 25, 25),
-			InputFocused = Color3.fromRGB(45, 25, 40),
-			InputIndicator = Color3.fromRGB(213, 55, 102),
+			InputFocused = Color3.fromRGB(40, 28, 70),
+			InputIndicator = Color3.fromRGB(139, 92, 246),
 
 			Dialog = Color3.fromRGB(15, 15, 15),
 			DialogHolder = Color3.fromRGB(25, 20, 25),
 			DialogHolderLine = Color3.fromRGB(25, 20, 25),
-			DialogButton = Color3.fromRGB(213, 55, 102),
-			DialogButtonBorder = Color3.fromRGB(213, 55, 102),
+			DialogButton = Color3.fromRGB(139, 92, 246),
+			DialogButtonBorder = Color3.fromRGB(139, 92, 246),
 			DialogBorder = Color3.fromRGB(40, 40, 40),
 			DialogInput = Color3.fromRGB(30, 30, 30),
-			DialogInputLine = Color3.fromRGB(213, 55, 102),
+			DialogInputLine = Color3.fromRGB(139, 92, 246),
 
-			MainText = Color3.fromRGB(213, 55, 102),
+			MainText = Color3.fromRGB(139, 92, 246),
 			Text = Color3.fromRGB(255, 255, 255),
 			SubText = Color3.fromRGB(180, 180, 180),
 
-			Hover = Color3.fromRGB(230, 80, 130), -- สี Hover สดกว่า accent เล็กน้อย
+			Hover = Color3.fromRGB(165, 125, 250), -- สี Hover สดกว่า accent เล็กน้อย
 			HoverChange = 0.07
 		}
 	end,
