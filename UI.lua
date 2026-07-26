@@ -1,4 +1,4 @@
-print("UI STARTer")
+print("UI START")
 
 -- Will be used later for getting flattened globals
 local ImportGlobals
@@ -519,7 +519,7 @@ local ClosureBindings = {
 			Config.Theme = Config.Theme or "Dark"
 			Config.MinimizeKey = Config.MinimizeKey or Enum.KeyCode.LeftControl
 			Config.BackgroundImage = Config.BackgroundImage
-			Config.BackgroundImageTransparency = Config.BackgroundImageTransparency or 0.15
+			Config.BackgroundImageTransparency = Config.BackgroundImageTransparency or 0
 
 			if Library.Window then
 				print("You cannot create more than one window.")
@@ -774,16 +774,17 @@ local ClosureBindings = {
 			props = props or {}
 			local AcrylicPaint = {}
 
+			local HasArt = props.BackgroundImage ~= nil
+
 			local BackgroundArtChildren = {}
-			if props.BackgroundImage then
+			if HasArt then
 				table.insert(BackgroundArtChildren, New("ImageLabel", {
 					Name = "BackgroundArt",
 					Image = props.BackgroundImage,
 					ScaleType = Enum.ScaleType.Crop,
 					Size = UDim2.fromScale(1, 1),
 					BackgroundTransparency = 1,
-					ImageTransparency = props.BackgroundImageTransparency or 0.15,
-					ZIndex = 0,
+					ImageTransparency = props.BackgroundImageTransparency or 0,
 				}, {
 					New("UICorner", {
 						CornerRadius = UDim.new(0, 8),
@@ -791,8 +792,8 @@ local ClosureBindings = {
 					New("UIGradient", {
 						Transparency = NumberSequence.new({
 							NumberSequenceKeypoint.new(0, 0),
-							NumberSequenceKeypoint.new(0.55, 0.15),
-							NumberSequenceKeypoint.new(1, 0.85),
+							NumberSequenceKeypoint.new(0.5, 0.05),
+							NumberSequenceKeypoint.new(1, 0.55),
 						}),
 					}),
 				}))
@@ -820,10 +821,8 @@ local ClosureBindings = {
 					CornerRadius = UDim.new(0, 8),
 				}),
 
-				table.unpack(BackgroundArtChildren),
-
 				New("Frame", {
-					BackgroundTransparency = 0.45,
+					BackgroundTransparency = HasArt and 0.85 or 0.45,
 					Size = UDim2.fromScale(1, 1),
 					Name = "Background",
 					ThemeTag = {
@@ -835,9 +834,11 @@ local ClosureBindings = {
 					}),
 				}),
 
+				table.unpack(BackgroundArtChildren),
+
 				New("Frame", {
 					BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-					BackgroundTransparency = 0.4,
+					BackgroundTransparency = HasArt and 0.9 or 0.4,
 					Size = UDim2.fromScale(1, 1),
 				}, {
 					New("UICorner", {
