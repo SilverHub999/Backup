@@ -1,4 +1,4 @@
-print("UI START")
+print("UI STARTer")
 
 -- Will be used later for getting flattened globals
 local ImportGlobals
@@ -6032,7 +6032,7 @@ local ClosureBindings = {
 			Accent = Color3.fromRGB(213, 55, 102), -- สีแดงอมชมพูหลัก
 
 			AcrylicMain = Color3.fromRGB(10, 10, 10),         -- ดำสนิท
-			AcrylicBorder = Color3.fromRGB(120, 80, 180),     -- ขอบม่วง (glow border)
+			AcrylicBorder = Color3.fromRGB(120, 80, 180),     -- ขอบม่วง (glow border) — ตรงตาม spec
 			AcrylicGradient = ColorSequence.new(
 				Color3.fromRGB(20, 20, 20),
 				Color3.fromRGB(10, 10, 10)
