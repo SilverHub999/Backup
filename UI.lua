@@ -1,4 +1,4 @@
-print("UI STARTER")
+print("UI START")
 
 -- Will be used later for getting flattened globals
 local ImportGlobals
@@ -1558,7 +1558,7 @@ local ClosureBindings = {
 					Size = UDim2.new(1, -16, 0, 18),
 					Position = UDim2.fromOffset(0, 2),
 					ThemeTag = {
-						TextColor3 = "Text",
+						TextColor3 = "MainText",
 					},
 				}),
 				Section.Container,
@@ -6105,6 +6105,7 @@ local ClosureBindings = {
 		DialogInputLine = Color3.fromRGB(160, 160, 160),
 
 		Text = Color3.fromRGB(240, 240, 240),
+		MainText = Color3.fromRGB(240, 240, 240),
 		SubText = Color3.fromRGB(170, 170, 170),
 		Hover = Color3.fromRGB(120, 120, 120),
 		HoverChange = 0.07,
