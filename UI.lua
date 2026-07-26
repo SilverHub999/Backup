@@ -1,4 +1,4 @@
-print("UI STARTER")
+print("UI START")
 
 -- Will be used later for getting flattened globals
 local ImportGlobals
@@ -943,7 +943,7 @@ local ClosureBindings = {
 					TextYAlignment = Enum.TextYAlignment.Top,
 					BackgroundTransparency = 1,
 					AnchorPoint = Vector2.new(1, 0),
-					Position = UDim2.new(1, -18, 0, 14),
+					Position = UDim2.new(1, -18, 0, 58),
 					Size = UDim2.new(0, 240, 0, 20),
 					ZIndex = 2,
 				}))
