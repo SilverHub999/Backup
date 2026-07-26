@@ -1,4 +1,4 @@
-print("UI START")
+print("UI STARTer")
 
 -- Will be used later for getting flattened globals
 local ImportGlobals
@@ -518,6 +518,8 @@ local ClosureBindings = {
 			Config.Acrylic = Config.Acrylic or true
 			Config.Theme = Config.Theme or "Dark"
 			Config.MinimizeKey = Config.MinimizeKey or Enum.KeyCode.LeftControl
+			Config.BackgroundImage = Config.BackgroundImage
+			Config.BackgroundImageTransparency = Config.BackgroundImageTransparency or 0.15
 
 			if Library.Window then
 				print("You cannot create more than one window.")
@@ -530,6 +532,8 @@ local ClosureBindings = {
 				Title = Config.Title,
 				SubTitle = Config.SubTitle,
 				TabWidth = Config.TabWidth,
+				BackgroundImage = Config.BackgroundImage,
+				BackgroundImageTransparency = Config.BackgroundImageTransparency,
 			})
 
 			Library.MinimizeKey = Config.MinimizeKey
@@ -767,7 +771,32 @@ local ClosureBindings = {
 		local New = Creator.New
 
 		return function(props)
+			props = props or {}
 			local AcrylicPaint = {}
+
+			local BackgroundArtChildren = {}
+			if props.BackgroundImage then
+				table.insert(BackgroundArtChildren, New("ImageLabel", {
+					Name = "BackgroundArt",
+					Image = props.BackgroundImage,
+					ScaleType = Enum.ScaleType.Crop,
+					Size = UDim2.fromScale(1, 1),
+					BackgroundTransparency = 1,
+					ImageTransparency = props.BackgroundImageTransparency or 0.15,
+					ZIndex = 0,
+				}, {
+					New("UICorner", {
+						CornerRadius = UDim.new(0, 8),
+					}),
+					New("UIGradient", {
+						Transparency = NumberSequence.new({
+							NumberSequenceKeypoint.new(0, 0),
+							NumberSequenceKeypoint.new(0.55, 0.15),
+							NumberSequenceKeypoint.new(1, 0.85),
+						}),
+					}),
+				}))
+			end
 
 			AcrylicPaint.Frame = New("Frame", {
 				Size = UDim2.fromScale(1, 1),
@@ -790,6 +819,8 @@ local ClosureBindings = {
 				New("UICorner", {
 					CornerRadius = UDim.new(0, 8),
 				}),
+
+				table.unpack(BackgroundArtChildren),
 
 				New("Frame", {
 					BackgroundTransparency = 0.45,
@@ -2086,7 +2117,10 @@ local ClosureBindings = {
 			local Resizing, ResizePos = false
 			local MinimizeNotif = false
 
-			Window.AcrylicPaint = Acrylic.AcrylicPaint()
+			Window.AcrylicPaint = Acrylic.AcrylicPaint({
+				BackgroundImage = Config.BackgroundImage,
+				BackgroundImageTransparency = Config.BackgroundImageTransparency,
+			})
 
 			local Selector = New("Frame", {
 				Size = UDim2.fromOffset(4, 0),
