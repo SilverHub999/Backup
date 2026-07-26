@@ -1,4 +1,4 @@
-print("UI START")
+print("UI STARTer")
 
 -- Will be used later for getting flattened globals
 local ImportGlobals
@@ -534,7 +534,6 @@ local ClosureBindings = {
 				TabWidth = Config.TabWidth,
 				BackgroundImage = Config.BackgroundImage,
 				BackgroundImageTransparency = Config.BackgroundImageTransparency,
-				Theme = Config.Theme,
 			})
 
 			Library.MinimizeKey = Config.MinimizeKey
@@ -776,46 +775,14 @@ local ClosureBindings = {
 			local AcrylicPaint = {}
 
 			local HasArt = props.BackgroundImage ~= nil
-			local IsNormalHub = props.Theme == "Normal Hub"
 
-			local FrameChildren = {}
-
-			table.insert(FrameChildren, New("ImageLabel", {
-				Image = "rbxassetid://8992230677",
-				ScaleType = "Slice",
-				SliceCenter = Rect.new(Vector2.new(99, 99), Vector2.new(99, 99)),
-				AnchorPoint = Vector2.new(0.5, 0.5),
-				Size = UDim2.new(1, 120, 1, 116),
-				Position = UDim2.new(0.5, 0, 0.5, 0),
-				BackgroundTransparency = 1,
-				ImageColor3 = Color3.fromRGB(0, 0, 0),
-				ImageTransparency = 0.7,
-			}))
-
-			table.insert(FrameChildren, New("UICorner", {
-				CornerRadius = UDim.new(0, 8),
-			}))
-
-			table.insert(FrameChildren, New("Frame", {
-				BackgroundTransparency = HasArt and 0.85 or 0.45,
-				Size = UDim2.fromScale(1, 1),
-				Name = "Background",
-				ThemeTag = {
-					BackgroundColor3 = "AcrylicMain",
-				},
-			}, {
-				New("UICorner", {
-					CornerRadius = UDim.new(0, 8),
-				}),
-			}))
-
+			local BackgroundArtChildren = {}
 			if HasArt then
-				table.insert(FrameChildren, New("ImageLabel", {
+				table.insert(BackgroundArtChildren, New("ImageLabel", {
 					Name = "BackgroundArt",
 					Image = props.BackgroundImage,
 					ScaleType = Enum.ScaleType.Crop,
-					Size = IsNormalHub and UDim2.new(1, 26, 1, 0) or UDim2.fromScale(1, 1),
-					Position = IsNormalHub and UDim2.new(0, 13, 0, 0) or UDim2.new(0, 0, 0, 0),
+					Size = UDim2.fromScale(1, 1),
 					BackgroundTransparency = 1,
 					ImageTransparency = props.BackgroundImageTransparency or 0,
 				}, {
@@ -830,123 +797,6 @@ local ClosureBindings = {
 						}),
 					}),
 				}))
-
-				if IsNormalHub then
-					-- Purple ambient glow behind the character (item 2)
-					table.insert(FrameChildren, New("ImageLabel", {
-						Name = "CharacterGlow",
-						Image = "rbxassetid://8992230677",
-						ScaleType = "Slice",
-						SliceCenter = Rect.new(Vector2.new(99, 99), Vector2.new(99, 99)),
-						AnchorPoint = Vector2.new(0, 0.5),
-						Size = UDim2.new(0.55, 60, 0.85, 60),
-						Position = UDim2.new(0, -20, 0.5, 0),
-						BackgroundTransparency = 1,
-						ImageColor3 = Color3.fromRGB(139, 92, 246),
-						ImageTransparency = 0.75,
-					}))
-
-					-- Left-to-right darkening overlay so text stays legible (item 1)
-					table.insert(FrameChildren, New("Frame", {
-						Name = "ReadabilityFade",
-						BackgroundColor3 = Color3.fromRGB(0, 0, 0),
-						BorderSizePixel = 0,
-						Size = UDim2.fromScale(1, 1),
-					}, {
-						New("UICorner", {
-							CornerRadius = UDim.new(0, 8),
-						}),
-						New("UIGradient", {
-							Transparency = NumberSequence.new({
-								NumberSequenceKeypoint.new(0, 0.6),
-								NumberSequenceKeypoint.new(0.5, 0.35),
-								NumberSequenceKeypoint.new(1, 0.1),
-							}),
-						}),
-					}))
-				end
-			end
-
-			table.insert(FrameChildren, New("Frame", {
-				BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-				BackgroundTransparency = HasArt and 0.9 or 0.4,
-				Size = UDim2.fromScale(1, 1),
-			}, {
-				New("UICorner", {
-					CornerRadius = UDim.new(0, 8),
-				}),
-
-				New("UIGradient", {
-					Rotation = 90,
-					ThemeTag = {
-						Color = "AcrylicGradient",
-					},
-				}),
-			}))
-
-			table.insert(FrameChildren, New("ImageLabel", {
-				Image = "rbxassetid://9968344105",
-				ImageTransparency = 0.98,
-				ScaleType = Enum.ScaleType.Tile,
-				TileSize = UDim2.new(0, 128, 0, 128),
-				Size = UDim2.fromScale(1, 1),
-				BackgroundTransparency = 1,
-			}, {
-				New("UICorner", {
-					CornerRadius = UDim.new(0, 8),
-				}),
-			}))
-
-			table.insert(FrameChildren, New("ImageLabel", {
-				Image = "rbxassetid://9968344227",
-				ImageTransparency = 0.9,
-				ScaleType = Enum.ScaleType.Tile,
-				TileSize = UDim2.new(0, 128, 0, 128),
-				Size = UDim2.fromScale(1, 1),
-				BackgroundTransparency = 1,
-				ThemeTag = {
-					ImageTransparency = "AcrylicNoise",
-				},
-			}, {
-				New("UICorner", {
-					CornerRadius = UDim.new(0, 8),
-				}),
-			}))
-
-			table.insert(FrameChildren, New("Frame", {
-				BackgroundTransparency = 1,
-				Size = UDim2.fromScale(1, 1),
-				ZIndex = 2,
-			}, {
-				New("UICorner", {
-					CornerRadius = UDim.new(0, 8),
-				}),
-				New("UIStroke", {
-					Transparency = IsNormalHub and 0.7 or 0.5,
-					Thickness = 1,
-					ThemeTag = {
-						Color = "AcrylicBorder",
-					},
-				}),
-			}))
-
-			if IsNormalHub then
-				-- Faint title watermark, top-right (item 3)
-				table.insert(FrameChildren, New("TextLabel", {
-					Name = "Watermark",
-					Text = string.upper(props.Title or ""),
-					Font = Enum.Font.GothamBold,
-					TextSize = 15,
-					TextColor3 = Color3.fromRGB(139, 92, 246),
-					TextTransparency = 0.75,
-					TextXAlignment = Enum.TextXAlignment.Right,
-					TextYAlignment = Enum.TextYAlignment.Top,
-					BackgroundTransparency = 1,
-					AnchorPoint = Vector2.new(1, 0),
-					Position = UDim2.new(1, -18, 0, 58),
-					Size = UDim2.new(0, 240, 0, 20),
-					ZIndex = 2,
-				}))
 			end
 
 			AcrylicPaint.Frame = New("Frame", {
@@ -954,7 +804,101 @@ local ClosureBindings = {
 				BackgroundTransparency = 0.9,
 				BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 				BorderSizePixel = 0,
-			}, FrameChildren)
+			}, {
+				New("ImageLabel", {
+					Image = "rbxassetid://8992230677",
+					ScaleType = "Slice",
+					SliceCenter = Rect.new(Vector2.new(99, 99), Vector2.new(99, 99)),
+					AnchorPoint = Vector2.new(0.5, 0.5),
+					Size = UDim2.new(1, 120, 1, 116),
+					Position = UDim2.new(0.5, 0, 0.5, 0),
+					BackgroundTransparency = 1,
+					ImageColor3 = Color3.fromRGB(0, 0, 0),
+					ImageTransparency = 0.7,
+				}),
+
+				New("UICorner", {
+					CornerRadius = UDim.new(0, 8),
+				}),
+
+				New("Frame", {
+					BackgroundTransparency = HasArt and 0.85 or 0.45,
+					Size = UDim2.fromScale(1, 1),
+					Name = "Background",
+					ThemeTag = {
+						BackgroundColor3 = "AcrylicMain",
+					},
+				}, {
+					New("UICorner", {
+						CornerRadius = UDim.new(0, 8),
+					}),
+				}),
+
+				table.unpack(BackgroundArtChildren),
+
+				New("Frame", {
+					BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+					BackgroundTransparency = HasArt and 0.9 or 0.4,
+					Size = UDim2.fromScale(1, 1),
+				}, {
+					New("UICorner", {
+						CornerRadius = UDim.new(0, 8),
+					}),
+
+					New("UIGradient", {
+						Rotation = 90,
+						ThemeTag = {
+							Color = "AcrylicGradient",
+						},
+					}),
+				}),
+
+				New("ImageLabel", {
+					Image = "rbxassetid://9968344105",
+					ImageTransparency = 0.98,
+					ScaleType = Enum.ScaleType.Tile,
+					TileSize = UDim2.new(0, 128, 0, 128),
+					Size = UDim2.fromScale(1, 1),
+					BackgroundTransparency = 1,
+				}, {
+					New("UICorner", {
+						CornerRadius = UDim.new(0, 8),
+					}),
+				}),
+
+				New("ImageLabel", {
+					Image = "rbxassetid://9968344227",
+					ImageTransparency = 0.9,
+					ScaleType = Enum.ScaleType.Tile,
+					TileSize = UDim2.new(0, 128, 0, 128),
+					Size = UDim2.fromScale(1, 1),
+					BackgroundTransparency = 1,
+					ThemeTag = {
+						ImageTransparency = "AcrylicNoise",
+					},
+				}, {
+					New("UICorner", {
+						CornerRadius = UDim.new(0, 8),
+					}),
+				}),
+
+				New("Frame", {
+					BackgroundTransparency = 1,
+					Size = UDim2.fromScale(1, 1),
+					ZIndex = 2,
+				}, {
+					New("UICorner", {
+						CornerRadius = UDim.new(0, 8),
+					}),
+					New("UIStroke", {
+						Transparency = 0.5,
+						Thickness = 1,
+						ThemeTag = {
+							Color = "AcrylicBorder",
+						},
+					}),
+				}),
+			})
 
 			local Blur
 
@@ -2177,8 +2121,6 @@ local ClosureBindings = {
 			Window.AcrylicPaint = Acrylic.AcrylicPaint({
 				BackgroundImage = Config.BackgroundImage,
 				BackgroundImageTransparency = Config.BackgroundImageTransparency,
-				Theme = Config.Theme,
-				Title = Config.Title,
 			})
 
 			local Selector = New("Frame", {
@@ -2236,8 +2178,6 @@ local ClosureBindings = {
 				Size = UDim2.new(1, -16, 0, 28),
 				Position = UDim2.fromOffset(Config.TabWidth + 26, 56),
 				BackgroundTransparency = 1,
-				TextStrokeTransparency = Config.Theme == "Normal Hub" and 0.8 or 1,
-				TextStrokeColor3 = Color3.fromRGB(255, 255, 255),
 				ThemeTag = {
 					TextColor3 = "Text",
 				},
@@ -6032,7 +5972,7 @@ local ClosureBindings = {
 			Accent = Color3.fromRGB(213, 55, 102), -- สีแดงอมชมพูหลัก
 
 			AcrylicMain = Color3.fromRGB(10, 10, 10),         -- ดำสนิท
-			AcrylicBorder = Color3.fromRGB(120, 80, 180),     -- ขอบม่วง (glow border) — ตรงตาม spec
+			AcrylicBorder = Color3.fromRGB(35, 35, 35),       -- ขอบเทาเข้ม
 			AcrylicGradient = ColorSequence.new(
 				Color3.fromRGB(20, 20, 20),
 				Color3.fromRGB(10, 10, 10)
@@ -6749,4 +6689,3 @@ do
 	-- If any scripts are currently running now from task scheduler, the scope won't close until all running threads are closed
 	-- (thanks for coming to my ted talk)
 end
-
